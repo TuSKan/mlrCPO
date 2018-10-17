@@ -24,8 +24,8 @@
 #' @family filter
 cpoFilterFeatures = makeCPOExtendedTrafo("filterFeatures", #nolint
   par.set = c(
-      makeParamSet(makeDiscreteLearnerParam("method", values = levels(mlr::listFilterMethods()$id), default = "randomForestSRC.rfsrc"),
-        makeUntypedLearnerParam("fval", default = NULL)),
+      makeParamSet(makeUntypedLearnerParam("method", default = "randomForestSRC.rfsrc"),
+      makeUntypedLearnerParam("fval", default = NULL)),
       pSSLrn(
           perc = NULL: numeric[0, 1] [[special.vals = list(NULL)]],
           abs = NULL: integer[0, ] [[special.vals = list(NULL)]],
