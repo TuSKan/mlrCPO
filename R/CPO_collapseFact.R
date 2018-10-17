@@ -14,6 +14,7 @@
 cpoCollapseFact = makeCPO("collapse.fact",  # nolint
   pSS(max.collapsed.class.prevalence = 0.1: numeric[0, ~1]),
   dataformat = "factor",
+  fix.factors = TRUE,
   cpo.train = {
     sapply(data, function(d) {
       if (all(is.na(d))) {
